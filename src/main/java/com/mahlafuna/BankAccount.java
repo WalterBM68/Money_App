@@ -6,10 +6,10 @@ public abstract class BankAccount {
     private final String accountHolderName;
     protected double balance;
 
-    public BankAccount(String accountNumber, String accountHolderName, double balance) {
+    public BankAccount(String accountNumber, String accountHolderName, double initialBalance) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
-        this.balance = balance;
+        this.balance = initialBalance;
     }
 
     public abstract void withdraw(double amount);
