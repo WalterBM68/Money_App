@@ -7,7 +7,7 @@ public class CheckingAccount extends BankAccount {
     private int transactionsCount;
 
     public CheckingAccount(String accountHolderName, String accountNumber, double initialAmount, double overdraftLimit) {
-        super(accountHolderName, accountNumber, initialAmount);
+        super(accountNumber, accountHolderName, initialAmount);
         this.overdraftLimit = overdraftLimit;
         this.freeTransactions = 5;
         this.transactionsCount = 0;
@@ -17,6 +17,7 @@ public class CheckingAccount extends BankAccount {
     public void withdraw(double amount) {
         if (amount > 0 && (balance - amount) >= -overdraftLimit) {
             balance -= amount;
+            balance -= 7; //charging the users R7 if they withdraw money
             transactionsCount++;
         }
     }
