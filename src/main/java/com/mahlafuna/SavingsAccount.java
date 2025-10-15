@@ -14,7 +14,8 @@ public class SavingsAccount extends BankAccount {
     @Override
     public void withdraw(double amount) {
         if (amount > 0 && (balance - amount) >= minimumAmount) {
-            this.balance -= amount;
+            balance -= amount;
+            balance -= 7; //charging the user R7 if she/he withdraws money
         } else  {
             throw new IllegalArgumentException("Insufficient funds");
         }
