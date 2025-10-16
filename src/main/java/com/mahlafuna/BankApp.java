@@ -7,7 +7,7 @@ public class BankApp {
 
         //Create bank accounts
         SavingsAccount account = new SavingsAccount("Jack", "1230", 200.0, 1.0);
-        CheckingAccount checking = new CheckingAccount("Brazo", "1720", 50.0, 2.5);
+        CheckingAccount checking = new CheckingAccount("Brazo", "1720", 50.0, 200.0);
 
         //Add the accounts to the bank
         bankName.addBankAccount(account);
