@@ -51,6 +51,8 @@ public class BankAccountTest {
     @Test
     public void testWithdrawingOverLimits() {
         BankAccount account = new SavingsAccount("Jack", "123", 200.0, 1.0);
+
+        //Savings Account must have a minimum amount of R100 in it
         assertThrows(IllegalArgumentException.class, () -> account.withdraw(150.0), "Insufficient funds");
     }
 
