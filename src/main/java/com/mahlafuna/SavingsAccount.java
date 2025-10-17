@@ -34,5 +34,5 @@ public class SavingsAccount extends BankAccount {
      * Add interest instead of charging fees per month
      */
     @Override
-    public void applyMonthlyFees() { balance += balance * (interestRate / 12); }
+    public void applyMonthlyFees() { balance += Math.ceil(balance * (interestRate / 12)); }
 }
