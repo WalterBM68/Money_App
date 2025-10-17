@@ -3,6 +3,9 @@ package com.mahlafuna;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * These are unit tests that tests the functionality of the Bank App.
+ */
 public class BankAccountTest {
     @Test
     public void testSavingsBankAccount() {
